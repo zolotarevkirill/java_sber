@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class MainClass {
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.gecko.driver", "/Users/kzolotarev/IdeaProjects/testyandex/drivers/geckodriver");
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
 
         WebDriver driver =  new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -53,12 +53,7 @@ public class MainClass {
         List<WebElement> result_titles = driver.findElements(By.cssSelector(".n-snippet-card2__title > a.link"));
 
         String title = result_titles.get(2).getText();
-
-
-
+        //assert
         driver.quit();
     }
-
 }
-//.n-snippet-card2__title > a.link
-//header-search
